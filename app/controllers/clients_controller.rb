@@ -8,7 +8,7 @@ class ClientsController < ApplicationController
   
   def show
     client = find_client
-    render json: client, status: :ok
+    render json: client, serializer: ClientShowSerializer, status: :ok
   end
 
   def create
